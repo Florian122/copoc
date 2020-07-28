@@ -1,7 +1,7 @@
 {
   "0": {
     "video": "left",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/cocop/videos/test1.mp4",
     "type": "single",
     "content": [
       "Denkst du wirklich, dass es sich hierbei um Racial profiling handelt?",
@@ -10,7 +10,7 @@
   },
   "1": {
     "video": "right",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/cocop/videos/test1.mp4",
     "type": "single",
     "content": [
       "Findest du es nachvollziehbar, wie die Polizei sich verhalten hat?",
@@ -19,7 +19,7 @@
   },
   "2": {
     "video": "right",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/cocop/videos/test1.mp4",
     "type": "single",
     "content": [
       "Wie war die rechtliche Grundlage?",
@@ -28,7 +28,7 @@
   },
   "3": {
     "video": "left",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/cocop/videos/test1.mp4",
     "type": "single",
     "content": [
       "Ist es nachvollziehbar, dass an kriminalitäts belasteten Orten ohne konkreten Verdacht kontrolliert werden darf?",
@@ -37,7 +37,7 @@
   },
   "4": {
     "video": "left",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/cocop/videos/test1.mp4",
     "type": "single",
     "content": [
       "Verhältst du dich bei einer Kontrolle der Polizei gegenüber kooperativ?",
@@ -46,7 +46,7 @@
   },
   "5": {
     "video": "right",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/cocop/videos/test1.mp4",
     "type": "single",
     "content": [
       "Kannst du verstehen, dass dein Gegenüber auf Grund regelmäßigen Kontrollen frustriert ist?",
@@ -55,7 +55,7 @@
   },
   "6": {
     "video": "right",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/cocop/videos/test1.mp4",
     "type": "single",
     "content": [
       "Findest du es schwierig für die Institution Polizei zu arbeiten, obwohl Probleme wie Rassismus vorliegen?",
@@ -64,7 +64,7 @@
   },
   "7": {
     "video": "left",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/cocop/videos/test1.mp4",
     "type": "both",
     "content": [
       "Wie würdest du dich fühlen, wenn du überdurchschnittlich oft kontrolliert wirst?",
@@ -75,7 +75,7 @@
   },
   "8": {
     "video": "right",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/cocop/videos/test1.mp4",
     "type": "single",
     "content": [
       "Kontrolliert ihr tendenziell eher Menschen mit Migrationshintergrund?",
@@ -84,7 +84,7 @@
   },
   "9": {
     "video": "left",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/cocop/videos/test1.mp4",
     "type": "both",
     "content": [
       "Glaubst du durch überdurchschnittlich viele Kontrollen werden Vorurteile gegenüber PoC verstärkt und gefestigt?",
@@ -95,7 +95,7 @@
   },
   "10": {
     "video": "right",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/cocop/videos/test1.mp4",
     "type": "single",
     "content": [
       "Was würde helfen um Rassismus bei der Polizei zu verhindern?",
