@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/copoc/static/css/main.5a3ec948.chunk.css",
-    "main.js": "/copoc/static/js/main.0adac106.chunk.js",
-    "main.js.map": "/copoc/static/js/main.0adac106.chunk.js.map",
+    "main.js": "/copoc/static/js/main.6f1cd210.chunk.js",
+    "main.js.map": "/copoc/static/js/main.6f1cd210.chunk.js.map",
     "runtime-main.js": "/copoc/static/js/runtime-main.569b7175.js",
     "runtime-main.js.map": "/copoc/static/js/runtime-main.569b7175.js.map",
     "static/js/2.7a671272.chunk.js": "/copoc/static/js/2.7a671272.chunk.js",
     "static/js/2.7a671272.chunk.js.map": "/copoc/static/js/2.7a671272.chunk.js.map",
     "index.html": "/copoc/index.html",
-    "precache-manifest.0d075ac7270a0ee91c724e737a5408d6.js": "/copoc/precache-manifest.0d075ac7270a0ee91c724e737a5408d6.js",
+    "precache-manifest.e9e17d68c2532075c00764c4c821fae4.js": "/copoc/precache-manifest.e9e17d68c2532075c00764c4c821fae4.js",
     "service-worker.js": "/copoc/service-worker.js",
     "static/css/main.5a3ec948.chunk.css.map": "/copoc/static/css/main.5a3ec948.chunk.css.map",
     "static/js/2.7a671272.chunk.js.LICENSE.txt": "/copoc/static/js/2.7a671272.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.569b7175.js",
     "static/js/2.7a671272.chunk.js",
     "static/css/main.5a3ec948.chunk.css",
-    "static/js/main.0adac106.chunk.js"
+    "static/js/main.6f1cd210.chunk.js"
   ]
 }
