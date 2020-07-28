@@ -2,7 +2,7 @@
   "name": "copoc",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://florian122.github.io/copoc/",
+  "homepage": "https://florian122.github.io/copoc",
   "dependencies": {
     "@tensorflow/tfjs-node": "^2.0.1",
     "@testing-library/jest-dom": "^4.2.4",
