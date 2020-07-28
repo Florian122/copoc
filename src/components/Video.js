@@ -182,7 +182,7 @@ export default function Video({ choices, onFinished }) {
         ) : null}
 
         <video
-          src="/videos/test1.mp4"
+          src="/cocop/videos/test1.mp4"
           onEnded={() => videoFinished(0)}
           onClick={() => setSelectedVideo("left")}
           style={{
@@ -193,7 +193,7 @@ export default function Video({ choices, onFinished }) {
 
         <video
           autoPlay
-          src="/videos/test1.mp4"
+          src="/cocop/videos/test1.mp4"
           onEnded={() => videoFinished(1)}
           onClick={() => setSelectedVideo("right")}
           style={{
