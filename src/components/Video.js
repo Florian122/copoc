@@ -25,10 +25,12 @@ export default function Video({ choices, onFinished }) {
     setProgress(progress + 1);
     setQuestionType("none");
     if (Questions[progress].video === "left") {
-      leftVideo.current.src = Questions[progress].videoSrc;
+      leftVideo.current.src =
+        process.env.PUBLIC_URL + Questions[progress].videoSrc;
       leftVideo.current.play();
     } else {
-      rightVideo.current.src = Questions[progress].videoSrc;
+      rightVideo.current.src =
+        process.env.PUBLIC_URL + Questions[progress].videoSrc;
       rightVideo.current.play();
     }
   };
@@ -182,7 +184,7 @@ export default function Video({ choices, onFinished }) {
         ) : null}
 
         <video
-          src="/cocop/videos/test1.mp4"
+          src={process.env.PUBLIC_URL + "/videos/test1.mp4"}
           onEnded={() => videoFinished(0)}
           onClick={() => setSelectedVideo("left")}
           style={{
@@ -193,7 +195,7 @@ export default function Video({ choices, onFinished }) {
 
         <video
           autoPlay
-          src="/cocop/videos/test1.mp4"
+          src={process.env.PUBLIC_URL + "/videos/test1.mp4"}
           onEnded={() => videoFinished(1)}
           onClick={() => setSelectedVideo("right")}
           style={{
