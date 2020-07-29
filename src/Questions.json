@@ -1,105 +1,196 @@
 {
+  "-1": {
+    "video": "left",
+    "videoSrc": "/videos/BPOC_Szene1.mp4",
+    "type": "single"
+  },
   "0": {
     "video": "left",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/videos/BPOC_Szene2.mp4",
     "type": "single",
     "content": [
-      "Denkst du wirklich, dass es sich hierbei um Racial profiling handelt?",
-      "Wie beurteilst du den Fall?"
+      {
+        "points": 2,
+        "text": "Denkst du wirklich, dass es sich hierbei um Racial profiling handelt?"
+      },
+      {
+        "points": 2,
+        "text": "Wie beurteilst du den Fall?"
+      }
     ]
   },
   "1": {
     "video": "right",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/videos/COP_Szene1.mp4",
     "type": "single",
     "content": [
-      "Findest du es nachvollziehbar, wie die Polizei sich verhalten hat?",
-      "Findest du die Polizei hat ist falsch vorgegangen?"
+      {
+        "points": 2,
+        "text": "Findest du es nachvollziehbar, wie die Polizei sich verhalten hat?"
+      },
+      {
+        "points": 2,
+        "text": "Findest du die Polizei ist falsch vorgegangen?"
+      }
     ]
   },
   "2": {
     "video": "right",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/videos/COP_Szene2.mp4",
     "type": "single",
     "content": [
-      "Wie war die rechtliche Grundlage?",
-      "Darf er ohne konkreten Tatverdacht kontrolliert werden?"
+      {
+        "points": 2,
+        "text": "Wie war die rechtliche Grundlage?"
+      },
+      {
+        "points": 2,
+        "text": "Darf er ohne konkreten Tatverdacht kontrolliert werden?"
+      }
     ]
   },
   "3": {
     "video": "left",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/videos/BPOC_Szene3.mp4",
     "type": "single",
     "content": [
-      "Ist es nachvollziehbar, dass an kriminalitäts belasteten Orten ohne konkreten Verdacht kontrolliert werden darf?",
-      "An einem kriminalitäts belasteten Ort muss viel kontrolliert werden, dazu gehören öffentliche Plätze wie Bahnhöfe. Ist der Vorwurf von Racial Profiling damit hinfällig?"
+      {
+        "points": 2,
+        "text": "Ist es nachvollziehbar, dass an kriminalitäts belasteten Orten ohne konkreten Verdacht kontrolliert werden darf?"
+      },
+      {
+        "points": 2,
+        "text": "An einem kriminalitäts belasteten Ort muss viel kontrolliert werden, dazu gehören öffentliche Plätze wie Bahnhöfe. Ist der Vorwurf von Racial Profiling damit hinfällig?"
+      }
     ]
   },
   "4": {
     "video": "left",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/videos/BPOC_Szene4.mp4",
     "type": "single",
     "content": [
-      "Verhältst du dich bei einer Kontrolle der Polizei gegenüber kooperativ?",
-      "Wie fühlst du dich bei einer Polizeikontrolle?"
+      {
+        "points": 2,
+        "text": "Verhältst du dich bei einer Kontrolle der Polizei gegenüber kooperativ?"
+      },
+      {
+        "points": 2,
+        "text": "Wie fühlst du dich bei einer Polizeikontrolle?"
+      }
     ]
   },
   "5": {
     "video": "right",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/videos/COP_Szene3.mp4",
     "type": "single",
     "content": [
-      "Kannst du verstehen, dass dein Gegenüber auf Grund regelmäßigen Kontrollen frustriert ist?",
-      "Ist es anstrengend, jedes mal bei Kontrollen auf Unverständnis zu stoßen, obwohl man auf rechtlicher Grundlage handelt?"
+      {
+        "points": 2,
+        "text": "Kannst du verstehen, dass dein Gegenüber auf Grund regelmäßigen Kontrollen frustriert ist?"
+      },
+      {
+        "points": 2,
+        "text": "Ist es anstrengend, jedes mal bei Kontrollen auf Unverständnis zu stoßen, obwohl man auf rechtlicher Grundlage handelt?"
+      }
     ]
   },
   "6": {
     "video": "right",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/videos/COP_Szene4.mp4",
     "type": "single",
     "content": [
-      "Findest du es schwierig für die Institution Polizei zu arbeiten, obwohl Probleme wie Rassismus vorliegen?",
-      "Stört es dich, dass du bei der Arbeit ständig mit dem Thema Rassismus konfrontiert wirst, obwohl auch andere Berufsgruppen davon betroffen sind?"
+      {
+        "points": 2,
+        "text": "Findest du es schwierig für die Institution Polizei zu arbeiten, obwohl Probleme wie Rassismus vorliegen?"
+      },
+      {
+        "points": 2,
+        "text": "Stört es dich, dass du bei der Arbeit ständig mit dem Thema Rassismus konfrontiert wirst, obwohl auch andere Berufsgruppen davon betroffen sind?"
+      }
     ]
   },
   "7": {
     "video": "left",
-    "videoSrc": "/videos/test1.mp4",
-    "type": "both",
-    "content": [
-      "Wie würdest du dich fühlen, wenn du überdurchschnittlich oft kontrolliert wirst?",
-      "Ich weiß nicht wie ich mich fühlen würde, es ist schwer sich in die Situation hineinversetzen.",
-      "Das muss ein sehr unangenehmes Gefühl sein.",
-      "Solange ich nichts zu verbergen habe, sehe ich kein Problem."
-    ]
+    "videoSrc": "/videos/BPOC_Szene4_Frage.mp4",
+    "type": "none"
   },
   "8": {
-    "video": "right",
-    "videoSrc": "/videos/test1.mp4",
-    "type": "single",
+    "video": "none",
+    "type": "both",
     "content": [
-      "Kontrolliert ihr tendenziell eher Menschen mit Migrationshintergrund?",
-      "Der Polizeiberuf beruft sich auf Erfahrungen. Kontrolliert ihr mehr Menschen mit Einwanderungsgeschichte, weil es sich in der Vergangenheit bewährt hat?"
+      {
+        "points": 0,
+        "text": "Wie würdest du dich fühlen, wenn du überdurchschnittlich oft kontrolliert wirst?"
+      },
+      {
+        "points": 2,
+        "text": "Ich weiß nicht wie ich mich fühlen würde, es ist schwer sich in die Situation hineinversetzen."
+      },
+      {
+        "points": 2,
+        "text": "Das muss ein sehr unangenehmes Gefühl sein."
+      },
+      {
+        "points": 2,
+        "text": "Solange ich nichts zu verbergen habe, sehe ich kein Problem."
+      }
     ]
   },
   "9": {
-    "video": "left",
-    "videoSrc": "/videos/test1.mp4",
-    "type": "both",
+    "video": "right",
+    "videoSrc": "/videos/COP_Szene5.mp4",
+    "type": "single",
     "content": [
-      "Glaubst du durch überdurchschnittlich viele Kontrollen werden Vorurteile gegenüber PoC verstärkt und gefestigt?",
-      "Ich glaube das hängt nicht miteinander zusammen.",
-      "Ich denke schon, dass Vorurteile dadurch verstärkt beziehungsweise weitergetragen werden.",
-      "Vorurteile werden verstärkt, wenn man sie nicht hinterfragt und dementsprechend handelt. Allerdings weiß ich nicht, ob das hier der Fall ist, da bin ich überfragt."
+      {
+        "points": 2,
+        "text": "Kontrolliert ihr tendenziell eher Menschen mit Migrationshintergrund?"
+      },
+      {
+        "points": 2,
+        "text": "Der Polizeiberuf beruft sich auf Erfahrungen. Kontrolliert ihr mehr Menschen mit Einwanderungsgeschichte, weil es sich in der Vergangenheit bewährt hat?"
+      }
     ]
   },
   "10": {
+    "video": "left",
+    "videoSrc": "/videos/BPOC_Szene5.mp4",
+    "type": "none"
+  },
+  "11": {
+    "video": "none",
+    "type": "both",
+    "content": [
+      {
+        "points": 0,
+        "text": "Glaubst du durch überdurchschnittlich viele Kontrollen werden Vorurteile gegenüber PoC verstärkt und gefestigt?"
+      },
+      {
+        "points": 2,
+        "text": "Ich glaube das hängt nicht miteinander zusammen."
+      },
+      {
+        "points": 2,
+        "text": "Ich denke schon, dass Vorurteile dadurch verstärkt beziehungsweise weitergetragen werden."
+      },
+      {
+        "points": 2,
+        "text": "Vorurteile werden verstärkt, wenn man sie nicht hinterfragt und dementsprechend handelt. Allerdings weiß ich nicht, ob das hier der Fall ist, da bin ich überfragt."
+      }
+    ]
+  },
+  "12": {
     "video": "right",
-    "videoSrc": "/videos/test1.mp4",
+    "videoSrc": "/videos/COP_Szene6.mp4",
     "type": "single",
     "content": [
-      "Was würde helfen um Rassismus bei der Polizei zu verhindern?",
-      "Was denkst du würde helfen, damit die rassistischen Vorwürfe aufhören?"
+      {
+        "points": 2,
+        "text": "Was würde helfen um Rassismus bei der Polizei zu verhindern?"
+      },
+      {
+        "points": 2,
+        "text": "Was denkst du würde helfen, damit die rassistischen Vorwürfe aufhören?"
+      }
     ]
   }
 }

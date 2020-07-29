@@ -1,41 +1,51 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import "../Styles.css";
 import Questions from "../Questions.json";
+
+const videoWidth = 720;
+const videoHeight = 405;
 
 export default function Video({ choices, onFinished }) {
   const leftVideo = useRef();
   const rightVideo = useRef();
 
-  const [progress, setProgress] = useState(8);
-  const [selectedVideo, setSelectedVideo] = useState("none");
+  const [progress, setProgress] = useState(0);
 
-  const [questionType, setQuestionType] = useState("none");
+  const [questionType, setQuestionType] = useState("single");
 
-  const videoFinished = (id) => {
-    if (progress === 11) {
+  const videoFinished = (currentProgress) => {
+    if (currentProgress === 13) {
       onFinished();
       return;
     }
-    console.log(id);
-    setQuestionType(Questions[progress].type);
+    if (Questions[currentProgress].type === "none") {
+      handleNext(0);
+    }
+    setQuestionType(Questions[currentProgress].type);
   };
 
   const handleNext = (choice) => {
+    console.log(Questions[progress].videoSrc);
     choices.push(choice);
-    setProgress(progress + 1);
-    setQuestionType("none");
-    if (Questions[progress].video === "left") {
+
+    if (progress === 0) {
+      leftVideo.current.play();
+    } else if (Questions[progress].video === "left") {
       leftVideo.current.src =
         process.env.PUBLIC_URL + Questions[progress].videoSrc;
       leftVideo.current.play();
-    } else {
+    } else if (Questions[progress].video === "right") {
       rightVideo.current.src =
         process.env.PUBLIC_URL + Questions[progress].videoSrc;
       rightVideo.current.play();
     }
-  };
 
-  useEffect(() => {});
+    setQuestionType("none");
+    if (Questions[progress].video === "none") {
+      videoFinished(progress + 1);
+    }
+    setProgress(progress + 1);
+  };
 
   const renderFooter = () => {
     if (questionType === "none") {
@@ -47,36 +57,49 @@ export default function Video({ choices, onFinished }) {
           style={{
             display: "flex",
             flexDirection: "row",
+            justifyContent: "center",
           }}
         >
           <div
             style={{
-              width: "40%",
-              padding: 16,
+              width: videoWidth - 50,
+              paddingTop: 16,
             }}
           >
             {Questions[progress].video === "left" ? (
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <button
-                  style={{ border: "none", backgroundColor: "white" }}
+                  style={{
+                    border: "none",
+                    backgroundColor: "#fcfbf9",
+                    padding: 8,
+                  }}
                   className="question"
-                  onClick={() => handleNext()}
+                  onClick={() =>
+                    handleNext(Questions[progress].content[0].points)
+                  }
                 >
-                  {Questions[progress].content[0]}
+                  {Questions[progress].content[0].text}
                 </button>
                 <button
-                  style={{ border: "none", backgroundColor: "white" }}
+                  style={{
+                    padding: 8,
+                    border: "none",
+                    backgroundColor: "#fcfbf9",
+                  }}
                   className="question"
-                  onClick={() => handleNext()}
+                  onClick={() =>
+                    handleNext(Questions[progress].content[1].points)
+                  }
                 >
-                  {Questions[progress].content[1]}
+                  {Questions[progress].content[1].text}
                 </button>
               </div>
             ) : null}
           </div>
           <div
             style={{
-              width: "20%",
+              width: 100,
               display: "flex",
               justifyContent: "center",
             }}
@@ -85,25 +108,37 @@ export default function Video({ choices, onFinished }) {
           </div>
           <div
             style={{
-              width: "40%",
-              padding: 16,
+              width: videoWidth - 50,
+              paddingTop: 16,
             }}
           >
             {Questions[progress].video === "right" ? (
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <button
-                  style={{ border: "none", backgroundColor: "white" }}
+                  style={{
+                    padding: 8,
+                    border: "none",
+                    backgroundColor: "#fcfbf9",
+                  }}
                   className="question"
-                  onClick={() => handleNext()}
+                  onClick={() =>
+                    handleNext(Questions[progress].content[0].points)
+                  }
                 >
-                  {Questions[progress].content[0]}
+                  {Questions[progress].content[0].text}
                 </button>
                 <button
-                  style={{ border: "none", backgroundColor: "white" }}
+                  style={{
+                    padding: 8,
+                    border: "none",
+                    backgroundColor: "#fcfbf9",
+                  }}
                   className="question"
-                  onClick={() => handleNext()}
+                  onClick={() =>
+                    handleNext(Questions[progress].content[1].points)
+                  }
                 >
-                  {Questions[progress].content[1]}
+                  {Questions[progress].content[1].text}
                 </button>
               </div>
             ) : null}
@@ -117,28 +152,29 @@ export default function Video({ choices, onFinished }) {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            paddingTop: 16,
           }}
         >
           <button
-            style={{ border: "none", backgroundColor: "white" }}
+            style={{ padding: 8, border: "none", backgroundColor: "#fcfbf9" }}
             className="question"
-            onClick={() => handleNext()}
+            onClick={() => handleNext(Questions[progress].content[1].points)}
           >
-            {Questions[progress].content[1]}
+            {Questions[progress].content[1].text}
           </button>
           <button
-            style={{ border: "none", backgroundColor: "white" }}
+            style={{ padding: 8, border: "none", backgroundColor: "#fcfbf9" }}
             className="question"
-            onClick={() => handleNext()}
+            onClick={() => handleNext(Questions[progress].content[2].points)}
           >
-            {Questions[progress].content[2]}
+            {Questions[progress].content[2].text}
           </button>
           <button
-            style={{ border: "none", backgroundColor: "white" }}
+            style={{ padding: 8, border: "none", backgroundColor: "#fcfbf9" }}
             className="question"
-            onClick={() => handleNext()}
+            onClick={() => handleNext(Questions[progress].content[3].points)}
           >
-            {Questions[progress].content[3]}
+            {Questions[progress].content[3].text}
           </button>
         </div>
       );
@@ -146,11 +182,12 @@ export default function Video({ choices, onFinished }) {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: 32 }}>
       <div
         style={{
           display: "flex",
           flexDirection: "row",
+          justifyContent: "center",
           marginBottom: 16,
         }}
       >
@@ -159,15 +196,17 @@ export default function Video({ choices, onFinished }) {
             style={{
               position: "absolute",
               backgroundColor: "rgba(0,0,0,0.5)",
-              width: "100%",
-              height: "50%",
+              width: videoWidth * 2,
+              height: videoHeight,
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
             }}
           >
-            <h1 style={{ textAlign: "center", color: "white" }}>
-              {Questions[progress].content[0]}
+            <h1
+              style={{ textAlign: "center", color: "white", width: videoWidth }}
+            >
+              {Questions[progress].content[0].text}
             </h1>
           </div>
         ) : null}
@@ -176,30 +215,30 @@ export default function Video({ choices, onFinished }) {
             style={{
               position: "absolute",
               backgroundColor: "rgba(0,0,0,0.5)",
-              width: "50%",
-              height: "60%",
+              width: videoWidth,
+              height: videoHeight,
               left: Questions[progress].video === "left" ? 0 : "50%",
+              top: 32,
             }}
           />
         ) : null}
-
         <video
-          src={process.env.PUBLIC_URL + "/videos/test1.mp4"}
-          onEnded={() => videoFinished(0)}
-          onClick={() => setSelectedVideo("left")}
+          controls
+          src={process.env.PUBLIC_URL + "/videos/BPOC_Szene1.mp4"}
+          onEnded={() => videoFinished(progress)}
           style={{
-            width: selectedVideo === "left" ? "60%" : "50%",
+            width: videoWidth,
+            height: videoHeight,
           }}
           ref={leftVideo}
         />
-
         <video
-          autoPlay
-          src={process.env.PUBLIC_URL + "/videos/test1.mp4"}
-          onEnded={() => videoFinished(1)}
-          onClick={() => setSelectedVideo("right")}
+          controls
+          src={process.env.PUBLIC_URL + "/videos/COP_Szene1.mp4"}
+          onEnded={() => videoFinished(progress)}
           style={{
-            width: selectedVideo === "right" ? "60%" : "50%",
+            width: videoWidth,
+            height: videoHeight,
           }}
           ref={rightVideo}
         />

@@ -1,5 +1,7 @@
 .button {
-  background-color: white;
+  font-family: "Muli Regular";
+  font-size: larger;
+  background-color: #fcfbf9;
   color: black;
   border: 2px solid black;
   border-radius: 20px;
@@ -13,6 +15,7 @@
 
 .question {
   font-size: larger;
+  font-family: Muli Regular;
 }
 
 .question:hover {

@@ -1,15 +1,22 @@
 import React, { useRef, useEffect, useState } from "react";
-import '../Styles.css';
+import "../Styles.css";
 
-export default function Welcome({onFinished}) {
+export default function Welcome({ onFinished }) {
   const [next, setNext] = useState(false);
 
   if (!next) {
     return (
-      <div style={{ padding: 16 }}>
-        <h1 style={{ width: "70%" }}>
-          Herzlich willkommen auf unserer Webseite, bevor es losgeht, wollen wir
-          dir noch ein paar Begriffe erklären:
+      <div>
+        <h1
+          style={{
+            marginLeft: 64,
+            marginTop: 64,
+            width: "70%",
+          }}
+        >
+          Herzlich Willkommen auf unserer Webseite,
+          <br />
+          bevor es losgeht, wollen wir dir noch ein paar Begriffe erklären:
         </h1>
         <div style={{ display: "flex", flexDirection: "row" }}>
           <div style={{ flex: 2 }} />
@@ -42,7 +49,7 @@ export default function Welcome({onFinished}) {
             </p>
 
             <button
-              style={{marginLeft: "40%"}}
+              style={{ marginTop: 32, marginLeft: "40%" }}
               className="button"
               onClick={() => setNext(true)}
             >
@@ -55,8 +62,8 @@ export default function Welcome({onFinished}) {
     );
   } else {
     return (
-      <div style={{ padding: 16 }}>
-        <h1 style={{ width: "70%" }}>
+      <div>
+        <h1 style={{ marginLeft: 64, marginTop: 64, width: "70%" }}>
           Du hast die Möglichkeit einen Polizisten und eine BPoC zu folgendem
           Vorfall zu befragen; dazu werden dir jeweils zwei Fragen vorgeschlagen
           aus denen du Eine wählen kannst.
@@ -83,7 +90,7 @@ export default function Welcome({onFinished}) {
             </p>
 
             <button
-              style={{marginLeft: "40%"}}
+              style={{ marginTop: 32, marginLeft: "40%" }}
               className="button"
               onClick={() => onFinished()}
             >

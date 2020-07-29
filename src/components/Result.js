@@ -1,15 +1,25 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../Styles.css";
 
-export default function Result({ onFinished }) {
+export default function Result({ points }) {
   const [screen, setScreen] = useState("result");
+  const [position] = useState(() => {
+    if (points > 0) {
+      return "COP";
+    } else if (points < 0) {
+      return "BPOC";
+    } else {
+      return "neutral";
+    }
+  });
 
   if (screen === "result") {
     return (
-      <div style={{ padding: 16 }}>
-        <h1 style={{ width: "70%" }}>
+      <div style={{}}>
+        <h1 style={{ marginLeft: 128, marginTop: 128, width: "70%" }}>
           Die Auswahl deiner Fragen deuten darauf hin, dass du dich eher in
           meine Lage versetzen kannst
+          {position}
         </h1>
         <div style={{ display: "flex", flexDirection: "row" }}>
           <div style={{ flex: 2 }} />
