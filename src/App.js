@@ -6,15 +6,15 @@ import Result from "./components/Result";
 export default function App() {
   const [screen, setScreen] = useState("welcome");
 
-  const choices = [];
+  const points = 0;
 
   if (screen === "welcome") {
     return <Welcome onFinished={() => setScreen("video")} />;
   }
   if (screen === "video") {
-    return <Video choices={choices} onFinished={() => setScreen("result")} />;
+    return <Video points={points} onFinished={() => setScreen("result")} />;
   }
   if (screen === "result") {
-    return <Result choices={choices} />;
+    return <Result points={points} />;
   }
 }

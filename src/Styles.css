@@ -1,5 +1,5 @@
 .button {
-  font-family: "Muli Regular";
+  font-family: "Muli";
   font-size: larger;
   background-color: #fcfbf9;
   color: black;
@@ -15,7 +15,7 @@
 
 .question {
   font-size: larger;
-  font-family: Muli Regular;
+  font-family: "Muli";
 }
 
 .question:hover {

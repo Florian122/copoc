@@ -5,43 +5,88 @@ export default function Result({ points }) {
   const [screen, setScreen] = useState("result");
   const [position] = useState(() => {
     if (points > 0) {
-      return "COP";
+      return "bpoc";
     } else if (points < 0) {
-      return "BPOC";
+      return "cop";
     } else {
       return "neutral";
     }
   });
 
+  const getMessage = () => {
+    if (position === "neutral") {
+      return (
+        <>
+          <p>
+            ...das ist gut, denn es geht hier nicht darum Position zu beziehen,
+            sondern beide Seiten zu verstehen und deren Problematik
+            anzuerkennen.
+          </p>
+          <p>
+            Allerdings ist es uns wichtig zu sagen, dass es unabdinglich sich in
+            der Rassismusdebatte klar zu positionieren, eine neutrale Haltung
+            bedeut dass du ein kack rassist bist.
+          </p>
+        </>
+      );
+    }
+    if (position === "cop") {
+      return (
+        <>
+          <p>
+            ...mir ist es wichtig dir zu sagen, dass es hierbei nicht darum geht
+            Position zu beziehen, sondern beide Seiten zu verstehen und deren
+            Problematik anzuerkennen.
+          </p>
+          <p>
+            Falls du dich noch mehr mit der Thematik (der Rolle des BPoC)
+            Rassismus auseinander setzen möchtest, haben wir dir auf der
+            nächsten Seite eine Sammlung zusammengestellt, die dir hilft das
+            Problem besser zu verstehen und Meachnsimen aufzeigt, wie du daran
+            arbeiten kannst.
+          </p>
+        </>
+      );
+    }
+    if (position === "bpoc") {
+      return (
+        <>
+          <p>
+            ...das zeigt mir, dass du dich eventuell schon mit der Thematik
+            auseinander gesetzt hast oder selber schon von Rassismus betroffen
+            warst. Mir ist es wichtig dir zu sagen, dass es hierbei nicht darum
+            geht Position zu beziehen, sondern beide Seiten zu verstehen und
+            deren Problematik anzuerkennen.
+          </p>
+        </>
+      );
+    }
+  };
+
   if (screen === "result") {
     return (
       <div style={{}}>
-        <h1 style={{ marginLeft: 128, marginTop: 128, width: "70%" }}>
-          Die Auswahl deiner Fragen deuten darauf hin, dass du dich eher in
-          meine Lage versetzen kannst
-          {position}
+        <h1 style={{ marginLeft: 64, marginTop: 64, width: "70%" }}>
+          {position === "neutral"
+            ? "Die Auswahl deiner Fragen deuten darauf hin, dass du neutral eingestellt bist.."
+            : "Die Auswahl deiner Fragen deuten darauf hin, dass du dich eher in meine Lage versetzen kannst"}
         </h1>
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <div style={{ flex: 2 }} />
+          <div style={{ flex: 2 }}>
+            <img
+              alt={position}
+              style={{ marginLeft: 64 }}
+              src={process.env.PUBLIC_URL + "/images/" + position + ".png"}
+            />
+          </div>
           <div style={{ flex: 2, overflowY: "auto" }}>
-            <p>
-              ...mir ist es wichtig dir zu sagen, dass es hierbei nicht darum
-              geht Position zu beziehen, sondern beide Seiten zu verstehen und
-              deren Problematik anzuerkennen.
-            </p>
-            <p>
-              Falls du dich noch mehr mit der Thematik (der Rolle des BPoC)
-              Rassismus auseinander setzen möchtest, haben wir dir auf der
-              nächsten Seite eine Sammlung zusammengestellt, die dir hilft das
-              Problem besser zu verstehen und Meachnsimen aufzeigt, wie du daran
-              arbeiten kannst.
-            </p>
+            {getMessage()}
             <button
-              style={{ marginLeft: "40%" }}
+              style={{ marginTop: 32, marginLeft: "40%" }}
               className="button"
               onClick={() => setScreen("end")}
             >
-              alles klar!
+              Alles klar!
             </button>
           </div>
           <div style={{ flex: 1 }} />
@@ -51,8 +96,8 @@ export default function Result({ points }) {
   }
   if (screen === "end") {
     return (
-      <div style={{ padding: 16 }}>
-        <h1 style={{ width: "70%" }}>
+      <div>
+        <h1 style={{ marginLeft: 64, marginTop: 64, width: "70%" }}>
           Vielen Dank fürs Zuhören. Unsere Linkliste steht dir jederzeit,
           kostenfrei zur Verfügung bla bla
         </h1>
@@ -73,27 +118,23 @@ export default function Result({ points }) {
               soluptaquiae simenim enisqui conserum reruntore explant asiminimus
               moluptat. Udam quia nihicimus. Aquis estem que etur, cone a nat.
             </p>
+            <button
+              style={{ marginTop: 32, marginLeft: "40%" }}
+              className="button"
+              onClick={() => setScreen("contact")}
+            >
+              Kontakt
+            </button>
           </div>
           <div style={{ flex: 1 }} />
         </div>
-        <button
-          style={{
-            position: "absolute",
-            border: "none",
-            backgroundColor: "white",
-          }}
-          className="question"
-          onClick={() => setScreen("contact")}
-        >
-          Kontakt
-        </button>
       </div>
     );
   }
   if (screen === "contact") {
     return (
-      <div style={{ padding: 16 }}>
-        <h1 style={{ width: "70%" }}>Kontakt</h1>
+      <div>
+        <h1 style={{ marginLeft: 64, marginTop: 64, width: "70%" }}>Kontakt</h1>
         <div style={{ display: "flex", flexDirection: "row" }}>
           <div style={{ flex: 2 }} />
           <div style={{ flex: 2, overflowY: "auto" }}>

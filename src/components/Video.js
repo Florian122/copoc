@@ -3,9 +3,9 @@ import "../Styles.css";
 import Questions from "../Questions.json";
 
 const videoWidth = 720;
-const videoHeight = 405;
+const videoHeight = 600;
 
-export default function Video({ choices, onFinished }) {
+export default function Video({ points, onFinished }) {
   const leftVideo = useRef();
   const rightVideo = useRef();
 
@@ -24,9 +24,9 @@ export default function Video({ choices, onFinished }) {
     setQuestionType(Questions[currentProgress].type);
   };
 
-  const handleNext = (choice) => {
+  const handleNext = (value) => {
     console.log(Questions[progress].videoSrc);
-    choices.push(choice);
+    points += value;
 
     if (progress === 0) {
       leftVideo.current.play();
@@ -182,7 +182,7 @@ export default function Video({ choices, onFinished }) {
   };
 
   return (
-    <div style={{ marginTop: 32 }}>
+    <div style={{}}>
       <div
         style={{
           display: "flex",
@@ -210,38 +210,64 @@ export default function Video({ choices, onFinished }) {
             </h1>
           </div>
         ) : null}
-        {questionType === "none" && false ? (
-          <div
+        <div
+          style={{
+            width: videoWidth,
+            height: videoHeight,
+            overflow: "hidden",
+            display: "block",
+            marginRight: 4,
+          }}
+        >
+          {Questions[progress].video === "left" && false ? (
+            <div
+              style={{
+                position: "absolute",
+                backgroundColor: "rgba(0,0,0,0.5)",
+                width: videoWidth,
+                height: videoHeight,
+              }}
+            />
+          ) : null}
+          <video
+            src={process.env.PUBLIC_URL + "/videos/BPOC_Szene1.mp4"}
+            onEnded={() => videoFinished(progress)}
             style={{
-              position: "absolute",
-              backgroundColor: "rgba(0,0,0,0.5)",
-              width: videoWidth,
+              marginLeft: "-25%",
               height: videoHeight,
-              left: Questions[progress].video === "left" ? 0 : "50%",
-              top: 32,
             }}
+            ref={leftVideo}
           />
-        ) : null}
-        <video
-          controls
-          src={process.env.PUBLIC_URL + "/videos/BPOC_Szene1.mp4"}
-          onEnded={() => videoFinished(progress)}
+        </div>
+        <div
           style={{
             width: videoWidth,
             height: videoHeight,
+            overflow: "hidden",
+            display: "block",
+            marginLeft: 4,
           }}
-          ref={leftVideo}
-        />
-        <video
-          controls
-          src={process.env.PUBLIC_URL + "/videos/COP_Szene1.mp4"}
-          onEnded={() => videoFinished(progress)}
-          style={{
-            width: videoWidth,
-            height: videoHeight,
-          }}
-          ref={rightVideo}
-        />
+        >
+          {Questions[progress].video === "right" && false ? (
+            <div
+              style={{
+                position: "absolute",
+                backgroundColor: "rgba(0,0,0,0.5)",
+                width: videoWidth,
+                height: videoHeight,
+              }}
+            />
+          ) : null}
+          <video
+            src={process.env.PUBLIC_URL + "/videos/COP_Szene1.mp4"}
+            onEnded={() => videoFinished(progress)}
+            style={{
+              marginLeft: "-25%",
+              height: videoHeight,
+            }}
+            ref={rightVideo}
+          />
+        </div>
       </div>
       {renderFooter()}
     </div>
