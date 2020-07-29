@@ -28,6 +28,15 @@ h1 {
   font-family: "MuliBold";
 }
 
+h2 {
+  font-family: "MuliBold";
+}
+
+a {
+  font-family: "Muli";
+  color: black;
+}
+
 p {
   font-size: large;
   font-family: "Muli";

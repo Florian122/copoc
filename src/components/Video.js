@@ -5,16 +5,16 @@ import Questions from "../Questions.json";
 const videoWidth = 720;
 const videoHeight = 600;
 
-export default function Video({ points, onFinished }) {
+export default function Video({ points, setPoints, onFinished }) {
   const leftVideo = useRef();
   const rightVideo = useRef();
 
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(9);
 
   const [questionType, setQuestionType] = useState("single");
 
   const videoFinished = (currentProgress) => {
-    if (currentProgress === 13) {
+    if (currentProgress === 14) {
       onFinished();
       return;
     }
@@ -26,7 +26,7 @@ export default function Video({ points, onFinished }) {
 
   const handleNext = (value) => {
     console.log(Questions[progress].videoSrc);
-    points += value;
+    setPoints(points + value);
 
     if (progress === 0) {
       leftVideo.current.play();
@@ -230,7 +230,7 @@ export default function Video({ points, onFinished }) {
             />
           ) : null}
           <video
-            src={process.env.PUBLIC_URL + "/videos/BPOC_Szene1.mp4"}
+            src={process.env.PUBLIC_URL + "/videos/01_COPOC_Video.mp4"}
             onEnded={() => videoFinished(progress)}
             style={{
               marginLeft: "-25%",
@@ -259,7 +259,7 @@ export default function Video({ points, onFinished }) {
             />
           ) : null}
           <video
-            src={process.env.PUBLIC_URL + "/videos/COP_Szene1.mp4"}
+            src={process.env.PUBLIC_URL + "/videos/02_COPOC_Video.mp4"}
             onEnded={() => videoFinished(progress)}
             style={{
               marginLeft: "-25%",

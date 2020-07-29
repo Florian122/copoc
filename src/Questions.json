@@ -1,17 +1,12 @@
 {
-  "-1": {
-    "video": "left",
-    "videoSrc": "/videos/BPOC_Szene1.mp4",
-    "type": "single"
-  },
   "0": {
     "video": "left",
-    "videoSrc": "/videos/BPOC_Szene2.mp4",
+    "videoSrc": "/videos/01_COPOC_Video.mp4",
     "type": "single",
     "content": [
       {
         "points": -2,
-        "text": "Denkst du wirklich, dass es sich hierbei um Racial profiling handelt?"
+        "text": "Denkst du wirklich, dass es sich hierbei um Racial Profiling handelt? "
       },
       {
         "points": 2,
@@ -21,7 +16,7 @@
   },
   "1": {
     "video": "right",
-    "videoSrc": "/videos/COP_Szene1.mp4",
+    "videoSrc": "/videos/02_COPOC_Video.mp4",
     "type": "single",
     "content": [
       {
@@ -30,13 +25,13 @@
       },
       {
         "points": 2,
-        "text": "Findest du die Polizei ist falsch vorgegangen?"
+        "text": "Findest du, die Polizei ist falsch vorgegangen?"
       }
     ]
   },
   "2": {
     "video": "right",
-    "videoSrc": "/videos/COP_Szene2.mp4",
+    "videoSrc": "/videos/03_COPOC_Video.mp4",
     "type": "single",
     "content": [
       {
@@ -45,28 +40,29 @@
       },
       {
         "points": 2,
-        "text": "Darf er ohne konkreten Tatverdacht kontrolliert werden?"
+
+        "text": "Darf jemand ohne konkreten Tatverdacht kontrolliert werden?"
       }
     ]
   },
   "3": {
     "video": "left",
-    "videoSrc": "/videos/BPOC_Szene3.mp4",
+    "videoSrc": "/videos/04_COPOC_Video.mp4",
     "type": "single",
     "content": [
       {
         "points": 2,
-        "text": "Ist es nachvollziehbar, dass an kriminalitäts belasteten Orten ohne konkreten Verdacht kontrolliert werden darf?"
+        "text": " Ist es nachvollziehbar, dass an Kriminalität belasteten Orten ohne konkreten Verdacht kontrolliert werden darf?"
       },
       {
         "points": -2,
-        "text": "An einem kriminalitäts belasteten Ort muss viel kontrolliert werden, dazu gehören öffentliche Plätze wie Bahnhöfe. Ist der Vorwurf von Racial Profiling damit hinfällig?"
+        "text": "An einem Kriminalitäts belasteten Ort muss viel kontrolliert werden, dazu gehören öffentliche Plätze wie Bahnhöfe. Ist der Vorwurf von Racial Profiling damit hinfällig?"
       }
     ]
   },
   "4": {
     "video": "left",
-    "videoSrc": "/videos/BPOC_Szene4.mp4",
+    "videoSrc": "/videos/05_COPOC_Video.mp4",
     "type": "single",
     "content": [
       {
@@ -81,22 +77,22 @@
   },
   "5": {
     "video": "right",
-    "videoSrc": "/videos/COP_Szene3.mp4",
+    "videoSrc": "/videos/06_COPOC_Video.mp4",
     "type": "single",
     "content": [
       {
         "points": 2,
-        "text": "Kannst du verstehen, dass dein Gegenüber auf Grund regelmäßigen Kontrollen frustriert ist?"
+        "text": "Kannst du verstehen, dass dein Gegenüber von regelmäßigen Kontrollen frustriert ist?"
       },
       {
         "points": -2,
-        "text": "Ist es anstrengend, jedes mal bei Kontrollen auf Unverständnis zu stoßen, obwohl man auf rechtlicher Grundlage handelt?"
+        "text": "Ist es anstrengend, jedes Mal bei Kontrollen auf Unverständnis zu stoßen, obwohl man auf rechtlicher Grundlage handelt?"
       }
     ]
   },
   "6": {
     "video": "right",
-    "videoSrc": "/videos/COP_Szene4.mp4",
+    "videoSrc": "/videos/07_COPOC_Video.mp4",
     "type": "single",
     "content": [
       {
@@ -105,13 +101,13 @@
       },
       {
         "points": -2,
-        "text": "Stört es dich, dass du bei der Arbeit ständig mit dem Thema Rassismus konfrontiert wirst, obwohl auch andere Berufsgruppen davon betroffen sind?"
+        "text": "Stört es dich, dass du bei der Arbeit ständig mit dem Thema Rassismus konfrontiert wirst, obwohl auch andere Berufsgruppen betroffen sind?"
       }
     ]
   },
   "7": {
     "video": "left",
-    "videoSrc": "/videos/BPOC_Szene4_Frage.mp4",
+    "videoSrc": "/videos/08_COPOC_Video.mp4",
     "type": "none"
   },
   "8": {
@@ -123,7 +119,7 @@
       },
       {
         "points": 0,
-        "text": "Ich weiß nicht wie ich mich fühlen würde, es ist schwer sich in die Situation hineinversetzen."
+        "text": "Ich weiß nicht wie ich mich fühlen würde, es ist schwer sich in die Situation hineinzuversetzen."
       },
       {
         "points": 3,
@@ -137,7 +133,7 @@
   },
   "9": {
     "video": "right",
-    "videoSrc": "/videos/COP_Szene5.mp4",
+    "videoSrc": "/videos/09_COPOC_Video.mp4",
     "type": "single",
     "content": [
       {
@@ -152,7 +148,7 @@
   },
   "10": {
     "video": "left",
-    "videoSrc": "/videos/BPOC_Szene5.mp4",
+    "videoSrc": "/videos/10_COPOC_Video.mp4",
     "type": "none"
   },
   "11": {
@@ -160,11 +156,11 @@
     "type": "both",
     "content": [
       {
-        "text": "Glaubst du durch überdurchschnittlich viele Kontrollen werden Vorurteile gegenüber PoC verstärkt und gefestigt?"
+        "text": "Glaubst du durch überdurchschnittlich häufige Kontrollen werden Vorurteile gegenüber PoC verstärkt und gefestigt?"
       },
       {
         "points": -3,
-        "text": "Ich glaube das hängt nicht miteinander zusammen."
+        "text": "Ich glaube, das hängt nicht miteinander zusammen."
       },
       {
         "points": 3,
@@ -178,17 +174,27 @@
   },
   "12": {
     "video": "right",
-    "videoSrc": "/videos/COP_Szene6.mp4",
+    "videoSrc": "/videos/11_COPOC_Video.mp4",
     "type": "single",
     "content": [
       {
         "points": 2,
-        "text": "Was würde helfen um Rassismus bei der Polizei zu verhindern?"
+        "text": "Was würde helfen, um Rassismus bei der Polizei zu verhindern?"
       },
       {
         "points": -2,
         "text": "Was denkst du würde helfen, damit die rassistischen Vorwürfe aufhören?"
       }
     ]
+  },
+  "13": {
+    "video": "left",
+    "videoSrc": "/videos/12_COPOC_Video.mp4",
+    "type": "none"
+  },
+  "14": {
+    "video": "left",
+    "videoSrc": "/videos/12_COPOC_Video.mp4",
+    "type": "none"
   }
 }
